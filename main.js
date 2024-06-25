@@ -1,6 +1,5 @@
 $(document).ready(function(){
     console.log(document.querySelector('header button'));
-    console.log($('#botao-cancelar'));
 
     document.querySelector('header button').addEventListener('click', function() {
 
@@ -16,8 +15,11 @@ $(document).ready(function(){
 
     $('form').on('submit', function(e) {
         e.preventDefault();
+
         const enderecoDaNovaImagem = $('#endereco-imagem-nova').val();
+
         const novoItem =$('<li style="display: none"></li>');
+        
         $(`<img src="${enderecoDaNovaImagem}" />`).appendTo(novoItem);
         $(`
             <div class="overlay-imagem-link">
